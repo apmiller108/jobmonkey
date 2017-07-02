@@ -6,8 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'clockwork'
-gem 'puma', '~> 3.7'
 gem 'faraday'
+gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.1'
 
 group :development, :test do
