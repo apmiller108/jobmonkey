@@ -7,6 +7,7 @@ module Clockwork
     puts "Running #{job}"
   end
 
-  # every(1.day, 'midnight.job', :at => '00:00')
-  every(1.second, 'test.job') { puts 'running test job' }
+  every(1.day, 'astronomania-staging import job', at: '05:00') do
+    Astromania::Import.call(environment: :staging)
+  end
 end
